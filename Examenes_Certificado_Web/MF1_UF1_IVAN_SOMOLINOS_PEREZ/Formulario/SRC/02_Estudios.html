@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Examen HTML</title>
+	<meta name="description" content="Nuestro formulario para poder adjuntar tu curriculum">
+	<meta name="Empresa" content="Glozor">
+	<meta name="application-name" content="addCurriculum">
+	<meta name="generator" content="Visual Studio Code">
+	<link rel="icon" sizes=”64x64” href="../img/Favicon_check.png">
+	
+	<link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
+	
+	<script type="text/javascript" src="../JS/validacion.js"></script>
+</head>
+
+<body>
+
+	<form action="03_Experiencia.html">
+			
+			<fieldset>
+				<h1>Estudios</h1>
+					
+							<label>Titulación:</label>
+							<input type="text" placeholder="Titulación obtenida" required>
+
+				<br>
+							<label>Centro de estudios:</label>
+							<input 	type="text" placeholder="Centro de estudios" required>
+				<br>
+
+							<label>Fecha Inicio:</label>
+							<input type="date" class="fecha" required>
+
+				<br>
+
+							<label>Fecha Fin:</label>
+							<input type="date" class="fecha" required>
+
+				<br>
+						
+					<label style="display: inline-block;">Actualmente</label>
+					<input type="checkbox">
+		<!-- Aqui habri que hacer una funcion 
+		para que cuando este marcado el checkbox 
+		el campo date de fecha de fin se ponga en modo disabled -->
+
+				<br><br>
+												
+		<form action="pagina2.jsp" method="post" 
+				enctype="multipart/form-data" 
+				onsubmit="return f_actualizarCapaFichero();">
+		
+			<div class="shadow__btn">
+				<label for="campoFile">
+					<input type="file" accept="application/pdf" 
+							id="campoFile" 
+							onchange="f_actualizarCapaFichero()">
+					<span id="capaNombreFichero">
+							Adjuntar Titulacion 
+					</span>
+				</label>
+			</div>
+			
+			<br>
+
+			<button type="submit" id="Siguiente" class="shadow__btn">
+			Siguiente
+			</button>
+
+		</form>
+
+		</fieldset>
+	</form>
+</body>
+</html>
+

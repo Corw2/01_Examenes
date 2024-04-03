@@ -1,0 +1,39 @@
+body {
+    font-family: verdana;
+    font-size: 12px;
+}
+
+h1 {
+    color: #427eec;
+    font-size: 22px;
+}
+
+fieldset {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 900px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-color: #53a840;
+    border-width: 1px;
+}
+
+legend{
+    color: #eaba34;
+    font-weight: bold;
+}
+
+label {
+    color: #dc4935;
+    font-weight: bold;
+}
+
+/*  Estilos definidos en una clase. El punto indica que se puede aplicar a cualquier
+        etiqueta mediante el atributo class="nombre_estilo".
+*/
+.destacado {
+    font-size: 11px;
+    color:#990099;
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapete de Ruleta</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+   
+    
+    <div class="creditoJugador credito" id="creditoJugador"> Crédito: 30€ </div>
+   
+	    <video autoplay muted loop id="video-fondo">
+	        <source src="img/cartas.mp4" type="video/mp4">
+	        Tu navegador no soporta la etiqueta de vídeo.
+	    </video>
+
+
+    <div class="tableroRuleta">
+        <div class="cero" value="0" colspan="3">0</div>
+        <div class="numero red inpar" value="3">3</div>
+        <div class="numero black par" value="6">6</div>
+        <div class="numero red inpar" value="9">9</div>
+        <div class="numero red par" value="12">12</div>
+        <div class="numero black inpar" value="15">15</div>
+        <div class="numero red par" value="18">18</div>
+        <div class="numero black inpar" value="21">21</div>
+        <div class="numero red par" value="24">24</div>
+        <div class="numero black inpar" value="27">27</div>
+        <div class="numero red par" value="30">30</div>
+        <div class="numero black inpar" value="33">33</div>
+        <div class="numero red par" value="36">36</div>
+        <div class="verde">2to1</div>
+        <div class="numero black par" value="2">2</div>
+        <div class="numero red inpar" value="5">5</div>
+        <div class="numero black par" value="8">8</div>
+        <div class="numero black inpar" value="11">11</div>
+        <div class="numero red par" value="14">14</div>
+        <div class="numero black inpar" value="17">17</div>
+        <div class="numero red par" value="20">20</div>
+        <div class="numero black inpar" value="23">23</div>
+        <div class="numero red par" value="26">26</div>
+        <div class="numero black inpar" value="29">29</div>
+        <div class="numero red par" value="32">32</div>
+        <div class="numero black inpar" value="35">35</div>
+        <div class="verde">2to1</div>
+        <div class="numero red inpar" value="1">1</div>
+        <div class="numero black par" value="4">4</div>
+        <div class="numero red inpar" value="7">7</div>
+        <div class="numero black par" value="10">10</div>
+        <div class="numero black inpar" value="13">13</div>
+        <div class="numero red par" value="16">16</div>
+        <div class="numero black inpar" value="19">19</div>
+        <div class="numero red par" value="22">22</div>
+        <div class="numero black inpar" value="25">25</div>
+        <div class="numero red par" value="28">28</div>
+        <div class="numero black inpar" value="31">31</div>
+        <div class="numero red par"  value="34">34</div>
+        <div class="verde">2to1</div>
+    
+        <div class="vacio"></div>
+        
+        <div class="apuesta1">1 st 12</div>
+        <div class="apuesta2">2 st 12</div>
+        <div class="apuesta3">3 st 12</div>
+        
+        <div class="vacio2"></div>
+        <div class="vacio3"></div>
+        
+        <div class="a4">1-18</div>
+        <div class="a5">Even</div>
+        <div class="a6 red">Red</div>
+        <div class="a7 black">Black</div>
+        <div class="a8">Odd</div>
+        <div class="a9">19-36</div>
+    </div>
+
+    <div class="contenedor">
+
+        <div >
+            <image src="img/ruleta.png" class="ruleta" id="ruleta"></image>
+        </div>
+
+   
+
+    <div class="apuestas">
+            <input type="number" id="apuesta" placeholder="Cuanto apuestas" 
+                inputmode="numeric" pattern="[0-9]*" maxlength="25" size="35"
+                class="no-arrow" required autofocus>
+            <button onclick="apostar()" class="golden-button">Apostar</button>
+            <button onclick="volverJugar()" class="golden-button">Juega otra vez</button>
+            <button onclick="reloadPage()" class="golden-button">Rendirse</button>
+        </div>
+
+        <div id="resultado">Resultado:</div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

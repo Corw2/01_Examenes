@@ -1,0 +1,90 @@
+
+body {
+	font-family: "Kode Mono", monospace;
+  	font-optical-sizing: auto;
+  	font-weight: 600;
+  	font-style: normal;
+    width: 100%;
+    height: 100vh;
+    background-color: #191610;
+    color: #fff;
+}
+
+
+
+.container {
+    width: 50%;
+    height: 100%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #322C20 ;
+    border-radius: 10%;
+   
+}
+
+.container h1 {
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px #000;
+    
+}
+
+.rollers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #191610;
+    border-radius: 10%;
+    
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4B4230;
+    width: 100%;
+    height: 60%;
+    margin-top: 40px;
+    border-radius: 10%;
+}
+
+.roller {
+    font-size: 50px;
+}
+
+.roller span {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+span{
+    display: inline-block   ;
+    /* border: solid 1px black; */
+    /* background-color: #191610; */
+}
+
+.btn {
+
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #4B4230; /* Green */
+    border: solid 2px #fff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+
+}
+
+#money {
+    background-color: #322C20;
+    padding: 10px;
+    border-radius: 25px;
+  }

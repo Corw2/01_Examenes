@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Acceso a Formulario Examen HTML</title>
+	<meta name="description" content="Nuestro formulario para poder adjuntar tu curriculum">
+	<meta name="Empresa" content="Glozor">
+	<meta name="application-name" content="Login&curriculum">
+	<meta name="generator" content="Visual Studio Code">
+	
+	<link rel="icon" sizes="64x64" href="../img/Favicon_check.png">
+	
+	<link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
+	
+	<script type="text/javascript" src="../JS/validacion.js"></script>
+</head>
+
+<body onload="f_inicio();">
+
+<form action="01_Datos_Personales.html">
+	
+	<!-- le he puesto id, metodo y action: 
+	solo como apuntes: 
+	method="post": especifica cómo se enviarán los datos del formulario 
+	al servidor cuando el usuario lo envíe.
+	action="": El atributo action especifica la URL a la que se 
+	enviarán los datos del formulario cuando el usuario lo envíe. -->
+	
+	<fieldset>
+		<h1> Login </h1>
+		 
+			<label for="usuario">USUARIO
+				<input type="text" name="usuario" id="usuario" 
+						maxlength="20" placeholder="USUARIO / EMAil" 
+						required autofocus /> 
+			</label>
+	<br>
+
+			<label for="password">PASSWORD
+				<input type="password" name="password" id="password" 
+						maxlength="8" placeholder="PASSWORD" 
+						required/> 
+					
+				<input type="button" name="ver" id="ver" class="shadow__btn" 
+						value="VER" onclick="f_ver();"/>
+			</label>
+				
+	<br><br>
+
+			<button type="submit" id="Entrar" class="shadow__btn">
+					Entrar
+			</button>
+			<!-- Se que el redireccionar a otra pagina no sera asi pero al ser 
+			un proyecto pequeño lo hice asi. 
+			Se que no es mantenible en el tiempo al ser poco escalable. -->
+		
+	<br>			
+	
+			<!-- no funcinan ninguno de los enlaces, no los he configurado 
+				pero queria que aparecieran  -->
+			<p><br><a href="forgot-password.html">¿Olvidaste tu contraseña? </a></p>
+			<p>Crear cuenta nueva <a href="register.html">Registrate</a></p>
+	</fieldset>
+</form>
+</body>
+</html>
+

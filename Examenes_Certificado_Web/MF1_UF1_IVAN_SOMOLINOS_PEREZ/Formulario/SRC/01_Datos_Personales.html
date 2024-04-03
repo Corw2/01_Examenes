@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Datos Personales Formulario</title>
+	<meta name="description" content="Nuestro formulario para poder adjuntar tu curriculum">
+	<meta name="Empresa" content="Glozor">
+	<meta name="application-name" content="addCurriculum">
+	<meta name="generator" content="Visual Studio Code">
+	<link rel="icon" sizes=”64x64” href="../img/Favicon_check.png">
+	
+	<link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
+	
+	<script type="text/javascript" src="../JS/validacion.js"></script>
+</head>
+
+<body>
+
+<form action="02_Estudios.html">
+	<fieldset>
+		<h1>Datos Personales</h1>
+
+			<label>Nombre:
+				<input 	type="text" name="nombre" 
+						placeholder="Nombre" required autofocus>
+			</label>			
+
+			<label>Apellidos:
+				<input 	type="text" name="apellidos" 
+						placeholder="Apellidos" required>
+			</label>
+
+			<label>DNI: <br>
+				<input 	type="text" name="DNI" 
+						placeholder="DNI" required>
+			</label>
+
+			<label>Email:
+				<input 	type="email" placeholder="email" required>
+			</label>
+					
+			<label>Teléfono:
+				<input 	type="number" placeholder="Teléfono" required>
+			</label>
+
+			<br>
+
+			<label style="font-size: 20px;">Género:</label>
+					
+				<label style="display: inline-block;">Masculino
+					<input type="radio" name="genero" 
+							id="genero_masculino" value="masculino"> 
+				</label>
+		
+				<label style="display: inline-block;">Femenino
+					<input type="radio" name="genero" 
+							id="genero_femenino" value="femenino">
+				</label>
+
+			<br><br>
+
+					
+			<form action="pagina2.jsp" method="post" 
+					enctype="multipart/form-data" 
+				  	onsubmit="return f_actualizarCapaFichero();">
+			
+				<div class="shadow__btn">
+					<label for="campoFile">
+						<input type="file" accept="application/pdf" 
+								id="campoFile" 
+								onchange="f_actualizarCapaFichero()">
+						<span id="capaNombreFichero">
+								SELECCIONA FICHERO 
+						</span>
+					</label>
+				</div>	
+	
+				<br><br>
+
+					<button type="submit" id="Siguiente" class="shadow__btn">
+							Siguiente
+					</button>
+
+			</form>
+			
+			
+
+		
+	</fieldset>
+
+
+
+</form>
+		
+</body>
+</html>

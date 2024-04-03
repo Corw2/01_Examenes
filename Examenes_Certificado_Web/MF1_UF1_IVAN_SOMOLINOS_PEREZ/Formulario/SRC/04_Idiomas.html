@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Examen HTML</title>
+	<meta name="description" content="Nuestro formulario para poder adjuntar tu curriculum">
+	<meta name="Empresa" content="Glozor">
+	<meta name="application-name" content="addCurriculum">
+	<meta name="generator" content="Visual Studio Code">
+	<link rel="icon" sizes=”64x64” href="../img/Favicon_check.png">
+	
+	<link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
+	
+	<script type="text/javascript" src="../JS/validacion.js"></script>
+</head>
+
+<body>
+
+	<form action="05_Carta_Presentacion.html">>
+
+			<fieldset>
+				<h1>Idiomas</h1>
+
+					<select name="Idioma" required>
+						<option value="">Seleccionar Idioma</option>
+						<option value="Castellano">Castellano</option>
+						<option value="Gallego">Gallego</option>
+						<option value="Catalan">Catalan</option>
+						<option value="Vasco">Vasco</option>
+						<option value="Ingles">Ingles</option>
+						<option value="Frances">Frances</option>
+						<option value="Aleman">Aleman</option>
+					</select>
+
+				<br>
+
+					<label for="rango">Nivel:</label>
+					<input type="range" name="level1" id="rango" min="0" max="3" required>
+					
+					<label for="level1">
+						<output id="leveloutput1">0</output>
+					</label>
+
+ 					<ol>
+						<li>Básico</li>
+						<li>Intermedio</li>
+						<li>Avanzado</li>
+					</ol>
+				<br>
+
+					<button type="button" class="shadow__btn" 
+							onclick="addIdioma()">
+							Adjuntar Idioma</button>
+
+				<br><br>
+
+				<button type="submit" id="Siguiente" class="shadow__btn">
+						Siguiente
+				</button>
+
+				<br>
+
+			</fieldset>
+	</form>
+</body>
+</html>
+

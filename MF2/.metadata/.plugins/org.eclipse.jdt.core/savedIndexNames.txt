@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\05_Programacion\04_Proyectos\01_Examenes\MF2\.metadata\.plugins\org.eclipse.jdt.core
+3413270776.index
+2788189128.index
+1865797976.index

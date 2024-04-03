@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Juego Trilero</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    
+    <h1>Juego Trilero</h1>
+    
+        <div id="juegoTrilero">
+            <div class="carta" onclick="cartaSelec(0)"><img 
+                    src="img/trasera.jpg" alt="carta"></div>
+            <div class="carta" onclick="cartaSelec(1)"><img 
+                    src="img/trasera.jpg" alt="carta"></div>
+            <div class="carta" onclick="cartaSelec(2)"><img 
+                    src="img/trasera.jpg" alt="carta"></div>
+        </div>
+
+    <span id="dinero" value="3">Saldo:</span>
+
+<br>
+
+    <button onclick="volverJugar()">Juega otra vez</button>
+
+    <button onclick="reloadPage()">Rindete</button>
+
+    <script src="js/script.js"></script>
+
+    <br><br>
+
+</body>
+</html>

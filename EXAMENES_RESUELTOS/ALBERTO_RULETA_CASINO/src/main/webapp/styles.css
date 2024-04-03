@@ -1,0 +1,309 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #014d02;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor-principal{
+	max-width: 1200px;
+	margin: 30px auto;
+}
+
+
+.parent {
+	display: grid;
+	grid-template-columns: 2fr 1.5fr 1.5fr;
+	grid-template-rows: 70px;
+	grid-column-gap: 40px;
+	grid-row-gap: 0px;
+	justify-items: start;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+
+.styleButton{
+	font-size: 30px;
+    font-weight: 600;
+	text-align: center;
+    background-color: #851111;
+	color: #fcffbe;
+    width: 100%;
+    padding: 10px 30px;
+    border: 3px solid #e29a4b;
+}
+.styleButton-edit{
+	width: 250px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+
+
+.titulo{
+	font-size: 60px;
+}
+
+.contenedor-secundario {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	justify-items: center;
+	align-items: center;
+	column-gap: 20px;
+}
+
+img{
+	max-width: 380px;
+}
+
+.cajaRuleta{
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "btn0 btn3 btn6 btn9 btn12 btn15 btn18 btn21 btn24 btn27 btn30 btn33 btn36 f3btn2a1"
+    "btn0 btn2 btn5 btn8 btn11 btn14 btn17 btn20 btn23 btn26 btn29 btn32 btn35 f2btn2a1"
+    "btn0 btn1 btn4 btn7 btn10 btn13 btn16 btn19 btn22 btn25 btn28 btn31 btn34 f1btn2a1"
+    "  .  btD1 btD1 btD1 btD1  btD2  btD2  btD2  btD2  btD3  btD3  btD3  btD3      .   "
+    " .  bt1-18 bt1-18 btPa btPa  btNe  btNe  btRo  btRo  btIn  btIn  bt19-36  bt19-36  . ";
+    grid-template-rows: repeat(5, 50px);
+    grid-template-columns: repeat(14, 1fr);
+}
+
+.btn{
+	font-size: 20px;
+	color: #fff;
+	border: 1px solid #fff;
+	font-weight: bold;
+}
+.btn:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.btn0{
+  grid-area: btn0;
+  font-size: 40px;
+  background-color: #014d02;
+}
+.btn1{
+  grid-area: btn1;
+}
+.btn2{
+  grid-area: btn2;
+}
+.btn3{
+  grid-area: btn3;
+}
+.btn4{
+  grid-area: btn4;
+}
+.btn5{
+  grid-area: btn5;
+}
+.btn6{
+  grid-area: btn6;
+}
+.btn7{
+  grid-area: btn7;
+}
+.btn8{
+  grid-area: btn8;
+}
+.btn9{
+  grid-area: btn9;
+}
+.btn10{
+  grid-area: btn10;
+}
+.btn10{
+  grid-area: btn10;
+}
+.btn11{
+  grid-area: btn11;
+}
+.btn12{
+  grid-area: btn12;
+}
+.btn13{
+  grid-area: btn13;
+}
+.btn14{
+  grid-area: btn14;
+}
+.btn15{
+  grid-area: btn15;
+}
+.btn16{
+  grid-area: btn16;
+}
+.btn17{
+  grid-area: btn17;
+}
+.btn18{
+  grid-area: btn18;
+}
+.btn19{
+  grid-area: btn19;
+}
+.btn20{
+  grid-area: btn20;
+}
+.btn21{
+  grid-area: btn21;
+}
+.btn22{
+  grid-area: btn22;
+}
+.btn23{
+  grid-area: btn23;
+}
+.btn24{
+  grid-area: btn24;
+}
+.btn25{
+  grid-area: btn25;
+}
+.btn26{
+  grid-area: btn26;
+}
+.btn27{
+  grid-area: btn27;
+}
+.btn28{
+  grid-area: btn28;
+}
+.btn29{
+  grid-area: btn29;
+}
+.btn30{
+  grid-area: btn30;
+}
+.btn31{
+  grid-area: btn31;
+}
+.btn32{
+  grid-area: btn32;
+}
+.btn33{
+  grid-area: btn33;
+}
+.btn34{
+  grid-area: btn34;
+}
+.btn35{
+  grid-area: btn35;
+}
+
+
+
+.btn-rojo {
+	background-color: #C60707;
+}
+
+.btn-negro {
+	background-color: #000;
+}
+
+.btnLateral, .btnInferior{
+	background-color: #014d02;
+}
+
+.btPa{
+	grid-area: btPa;
+}
+
+.btIn{
+	grid-area: btIn;
+}
+
+.btRo{
+	grid-area: btRo;
+}
+
+.btNe{
+	grid-area: btNe;
+}
+
+.f1btn2a1{
+	grid-area: f1btn2a1;
+}
+
+.f2btn2a1{
+	grid-area: f2btn2a1;
+}
+
+.f3btn2a1{
+	grid-area: f3btn2a1;
+}
+
+.btD1{
+	grid-area: btD1;
+}
+
+.btD2{
+	grid-area: btD2;
+}
+
+.btD3{
+	grid-area: btD3;
+}
+
+.bt1-18{
+	grid-area: bt1-18;
+}
+
+.bt19-36{
+	grid-area: bt19-36;
+}
+
+.btnInferior, .btnLateral{
+	color: #fff;
+	font-size: 20px;
+}
+
+
+.contenedor-terciario {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+.botones-barra {
+	
+	background-color: #C60707;
+	color: #fff;
+	border: 1px solid #fff;
+	
+	
+	/*
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #000;
+	*/
+	
+	font-size: 20px;
+	display: inline-block;
+	width: 150px;
+	max-width: 300px;
+	padding: 15px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.fondo-rojo{
+	background-size: cover;
+	max-width: 40px;
+	clip-path: polygon(50.1% 0%, 100% 50%, 50.1% 100%, 0% 50%);
+}
+
+.fondo-negro{
+	background-size: cover;
+	max-width: 40px;
+	clip-path: polygon(50.1% 0%, 100% 50%, 50.1% 100%, 0% 50%);
+}

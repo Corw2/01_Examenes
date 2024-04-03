@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Trilero</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url('img/ruleta.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        h1, p {
+            background: #9ef5ca;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 15px;
+            border-left: 8px solid #febf42;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 8px;
+            border-right: 8px solid #febf42;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 8px;
+            max-width: 80%;
+            display: -webkit-inline-box;
+        }
+
+        #juegoTrilero {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .carta {
+            width: 200px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .carta img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 25px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #dineroActual{
+            color: #090909;
+            padding: 0.7em 1.7em;
+            margin: 100px;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background: #4cadf7;
+            cursor: pointer;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s;
+            box-shadow: 3px 3px 6px #c5c5c5, -3px -3px 6px #ffffff;
+
+
+        }
+
+
+        button {
+            color: #090909;
+            padding: 0.7em 1.7em;
+            margin: 100px;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background: #e8e8e8;
+            cursor: pointer;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s;
+            box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+        }
+
+        button:hover {
+            border: 1px solid white;
+        }
+
+        button:active {
+            box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Juego Trilero</h1>
+
+    <br>
+
+
+    
+    <div id="juegoTrilero">
+        <div class="carta" onclick="cartaSelec(0)"><img src="img/trasera.jpg" alt="carta"></div>
+        <div class="carta" onclick="cartaSelec(1)"><img src="img/trasera.jpg" alt="carta"></div>
+        <div class="carta" onclick="cartaSelec(2)"><img src="img/trasera.jpg" alt="carta"></div>
+    </div>
+
+    <br>
+
+    <span id="dineroActual">Saldo: 3</span>
+
+    <button onclick="volverJugar()">Juega otra vez</button>
+
+    <button onclick="reloadPage()">Rendirse</button>
+
+    <div id="mensaje"></div>
+
+    <script>
+       
+       let dinero = 3; // Declaración de la variable dinero
+
+        function saldo() {
+            document.getElementById("dineroActual").innerHTML = "Saldo: " + dinero;
+
+                if (dinero === 0) {
+                    alert("¡Has perdido todo tu dinero! Juego terminado.");
+                    
+                }
+        }
+
+        function cartaSelec(cartaGanadora) {
+            
+            const cartasTrasera = document.querySelectorAll('.carta');
+            const cartaAs = Math.floor(Math.random() * 3);
+            
+                for (let i = 0; i < cartasTrasera.length; i++) {
+                    cartasTrasera[i].innerHTML = '<img src="img/trasera.jpg" alt="cartaTrasera">';
+                }
+           
+            cartasTrasera[cartaAs].innerHTML = '<img src="img/As.jpg" alt="As">';
+            
+                if (cartaAs === cartaGanadora) {
+                    alert("¡Enhorabuena! Has encontrado el As.");
+                    dinero++;
+                    desactivarClics(); // Desactiva los clics en las cartas
+                } else {
+                    alert("Perdiste. Show me the Money.");
+                    dinero--;
+                    desactivarClics(); // Desactiva los clics en las cartas
+                }
+            
+                // Mostrar las otras dos cartas cuando se encuentre el As
+                setTimeout(() => {
+                    for (let i = 0; i < cartasTrasera.length; i++) {
+                        cartasTrasera[i].innerHTML = '<img src="img/As.jpg" alt="As">';
+                    }
+                    // Reemplazar las imágenes de las cartas que no son el As con una imagen diferente
+                    setTimeout(() => {
+                        for (let i = 0; i < cartasTrasera.length; i++) {
+                            if (i !== cartaAs) {
+                                cartasTrasera[i].innerHTML = '<img src="img/joker.jpg" alt="Joker">';
+                            }
+                        }
+                    }, ); 
+                }, ); 
+
+
+            saldo();
+        }
+
+        // Función para desactivar los clics en las cartas
+        function desactivarClics() {
+                const cartas = document.querySelectorAll('.carta');
+                    cartas.forEach(carta => {carta.style.pointerEvents = 'none'; });
+        }
+
+        // Función para activar los clics en las cartas
+        function activarClics() {
+                const cartas = document.querySelectorAll('.carta');
+                    cartas.forEach(carta => {carta.style.pointerEvents = 'auto';});
+        }
+
+        function volverJugar() {
+            const cartasTrasera = document.querySelectorAll('.carta');
+            for (let i = 0; i < cartasTrasera.length; i++) {
+                cartasTrasera[i].innerHTML = '<img src="img/trasera.jpg" alt="carta">';
+            }
+            document.getElementById("mensaje").innerHTML = ""; // Limpiar mensaje
+            // Reactivar el juego
+            juegoActivo = true;
+            activarClics();
+        }
+
+        function reloadPage() {
+            dinero = 3;
+            location.reload();
+            activarClics();
+        }
+
+        // Ejecutar saldo inicial
+        saldo();
+    </script>
+
+    <br><br>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapete de Ruleta</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="video-fondo">
+        <source src="../webapp/img/cartas.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de vídeo.
+    </video>
+
+
+    <div class="tableroRuleta">
+        <div class="cero" colspan="3">0</div>
+        <div class="numero red inpar">3</div>
+        <div class="numero black par">6</div>
+        <div class="numero red inpar">9</div>
+        <div class="numero red par">12</div>
+        <div class="numero black inpar">15</div>
+        <div class="numero red par">18</div>
+        <div class="numero black inpar">21</div>
+        <div class="numero red par">24</div>
+        <div class="numero black inpar">27</div>
+        <div class="numero red par">30</div>
+        <div class="numero black inpar">33</div>
+        <div class="numero red par">36</div>
+        <div class="verde">2to1</div>
+        <div class="numero black par">2</div>
+        <div class="numero red inpar">5</div>
+        <div class="numero black par">8</div>
+        <div class="numero black inpar">11</div>
+        <div class="numero red par">14</div>
+        <div class="numero black inpar">17</div>
+        <div class="numero red par">20</div>
+        <div class="numero black inpar">23</div>
+        <div class="numero red par">26</div>
+        <div class="numero black inpar">29</div>
+        <div class="numero red par">32</div>
+        <div class="numero black inpar">35</div>
+        <div class="verde">2to1</div>
+        <div class="numero red inpar">1</div>
+        <div class="numero black par">4</div>
+        <div class="numero red inpar">7</div>
+        <div class="numero black par">10</div>
+        <div class="numero black inpar">13</div>
+        <div class="numero red par">16</div>
+        <div class="numero black inpar">19</div>
+        <div class="numero red par">22</div>
+        <div class="numero black inpar">25</div>
+        <div class="numero red par">28</div>
+        <div class="numero black inpar">31</div>
+        <div class="numero red par">34</div>
+        <div class="verde">2to1</div>
+    
+        <div class="vacio"></div>
+        
+        <div class="apuesta1">1 st 12</div>
+        <div class="apuesta2">2 st 12</div>
+        <div class="apuesta3">3 st 12</div>
+        
+        <div class="vacio2"></div>
+        <div class="vacio3"></div>
+        
+        <div class="a4">1-18</div>
+        <div class="a5">Even</div>
+        <div class="a6 red">Red</div>
+        <div class="a7 black">Black</div>
+        <div class="a8">Odd</div>
+        <div class="a9">19-36</div>
+    </div>
+
+    <div class="contenedor">
+
+        <div class="ruleta" id="ruleta">
+            <image src="../webapp/img/ruleta.png" ></image>
+        </div>
+
+        <!-- Aquí se mostrará el crédito del jugador -->
+            <div class="creditoJugador" id="creditoJugador">Crédito: 30€ 
+
+                <div class="apuestas">
+                    <button onclick="apostarNumero()" class="golden-button">Número</button>
+
+                    <br>
+
+                    <button onclick="apostarColor('rojo')" class="golden-button">Rojo</button>
+                    <button onclick="apostarColor('negro')" class="golden-button">Negro</button>
+
+                    <button onclick="apostarParidad('par')" class="golden-button">Par</button>
+                    <button onclick="apostarParidad('impar')" class="golden-button">Impar</button>
+                </div>
+
+                
+                <div id="resultado">Resultado</div>
+
+            </div>
+
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+    padding: 0;
+    background-image: url('img/ruleta.jpg');
+    background-size: cover; /* Para cubrir todo el área del cuerpo */
+    background-position: center; /* Para centrar la imagen */
+	background-repeat:unset;
+	text-align: center;
+	
+
+}
+
+h1, p{
+	background: #9ef5ca; 
+	font-weight: bold; 
+	padding: 15px; 
+	border-left:8px solid #febf42; 
+	border-top-left-radius:20px; 
+	border-bottom-left-radius:8px;
+	border-right:8px solid #febf42; 
+	border-top-right-radius:20px; 
+	border-bottom-right-radius:8px;
+	max-width: 80%;
+	display: -webkit-inline-box;
+
+}
+
+
+#juegoTrilero {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center; /* Para centrar las imagenes en el div */
+	
+}
+
+/* contenedor de la imagen de las cartas */
+.carta {    
+	width: 200px;
+	height: 300px;
+	border: none;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 10px;
+	display: flex;
+	overflow: hidden;
+
+}
+
+
+/* imagen de las cartas */
+.carta img{
+	max-width: 100%;
+	height: auto;
+	border-radius: 25px;
+
+}
+
+/* para hacer que la carta del joker no se vea */
+.hidden {
+	display: none;
+}
+
+button {
+	color: #090909;
+	padding: 0.7em 1.7em;
+	font-size: 18px;
+	border-radius: 0.5em;
+	background: #e8e8e8;
+	cursor: pointer;
+	border: 1px solid #e8e8e8;
+	transition: all 0.3s;
+	box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+  
+  button:hover {
+	border: 1px solid white;
+}
+  
+  button:active {
+	box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
+  

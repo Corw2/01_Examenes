@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <title>Mario's Tragaperra</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tragaperras de Mario</h1>
+      <p>Dinero: <span id="money">0</span></p>
+      <div class="deposit-container">
+        <label for="deposit">
+          Introduzca cuanto dinero quiere depositar en Euros --->
+          <input type="number" id="deposit" min="1" max="10000" />
+        </label>
+        <button type="button" class="deposit-button">Depositar</button>
+      </div>
+      <div class="game-container">
+        <div class="rollers">
+          <div class="roller roller1">
+            <span id="symbol1">-</span> <span id="symbol2">-</span>
+            <span id="symbol3">-</span>
+          </div>
+          <div class="roller roller2">
+            <span id="symbol4">-</span> <span id="symbol5">-</span>
+            <span id="symbol6">-</span>
+          </div>
+          <div class="roller roller3">
+            <span id="symbol7">-</span> <span id="symbol8">-</span>
+            <span id="symbol9">-</span>
+          </div>
+        </div>
+        <button type="button" class="btn">Girar</button>
+        <p>Ganancia: <span id="wins">0</span></p>
+      </div>
+       <p>Click aquí para realizar la transferencia <a href="#" id="transferir"> Realizar la transferencia </a></p>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>

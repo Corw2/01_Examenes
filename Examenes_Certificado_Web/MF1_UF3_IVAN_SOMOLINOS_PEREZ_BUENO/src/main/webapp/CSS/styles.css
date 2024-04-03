@@ -1,0 +1,265 @@
+body{
+    z-index: 1; /* Asegura que el contenido esté delante del video */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-clip: url("../img/cartas.mp4");
+    background-color: rgb(78, 78, 78);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#video-fondo {
+    position: fixed; /* Fija el video al fondo de la página */
+    top: 0;
+    left: 0;
+    min-width: 100%; /* Ajusta el tamaño del video para cubrir toda la pantalla */
+    min-height: 100%;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+}
+
+.tableroRuleta {
+    margin: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(14, auto); /* 14 columnas en total */
+    grid-template-rows: repeat(5, auto); /* 5 filas en total */
+    margin-top: 80px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cero {
+    height: auto;
+    width: auto;
+    background-color: green;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    display: grid;
+    grid-row: span 3;
+    justify-items: center;
+    align-items: center;
+}
+
+.numero {
+    height: 50px;
+    width: auto;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.verde {
+    height: auto;
+    width: auto;
+    background-color: green;
+    color: white;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.vacio{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+.vacio2{
+    display: grid;
+    grid-column-start: 14;
+    grid-column-end: 14;
+
+}
+
+.vacio3{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+}
+
+.apuesta1, .apuesta2, .apuesta3  {
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    display: grid;
+    grid-column-start: 1;
+    grid-column: span 4;
+    background-color: green;
+    color: white;
+  
+}
+
+.a4, .a5, .a6, .a7, .a8, .a9  {
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    display: grid;
+    grid-column-start: 1;
+    grid-column: span 2;
+    background-color: green;
+    color: white;
+  
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+
+.ruleta {
+    margin: 40px auto; /* Centra horizontalmente */
+    max-width: 100%; /* Tamaño máximo del contenedor */
+    width: 30%; /* Ancho del contenedor */
+    height: auto; /* Alto del contenedor */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotando {
+    /* La ruleta girará durante 2 segundos */
+    animation: girar 10s linear infinite;
+    
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg); /* Rotación inicial */
+    }
+    to {
+        transform: rotate(720deg); /* Rotación final (una vuelta completa) */
+    }
+}
+
+
+.creditoJugador {
+    width: 60%;
+    height: 40%;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 20%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    color: #fef1a2;
+    border: #bc881b 3px solid;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    justify-content: center;
+
+}
+
+.apuestas {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#apuesta{
+    padding: 8px;
+    margin: 10px;
+    width: 20%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    border-radius: 20px;
+    color: #fef1a2;
+    border: #bc881b 3px solid;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, 
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* Estilo para ocultar las flechas */
+.no-arrow::-webkit-inner-spin-button,
+.no-arrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+#resultado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    color: #fef1a2;
+    border: #bc881b 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999; /* Asegura que esté por encima del resto del contenido */
+    display: none; /* Inicialmente oculto */
+
+}
+
+.golden-button {
+    touch-action: manipulation;
+    display: inline-block;
+    outline: none;
+    margin: 10px;
+    font-family: inherit;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.3em;
+    height: 30;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    padding: 0 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+      inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+      inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(
+      160deg,
+      #a54e07,
+      #b47e11,
+      #fef1a2,
+      #bc881b,
+      #a54e07
+    );
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  
+  .golden-button:focus,
+  .golden-button:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+      inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, 0.6);
+    color: rgba(120, 50, 5, 0.8);
+  }
+  
+  .golden-button:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+      inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  }
+  
+
